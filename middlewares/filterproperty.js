@@ -3,8 +3,9 @@ const { property,Op } = require('../db');
 const router = Router();
 
 router.post('/', async(req, res) => {
+  console.log("body de la pticion");
+  console.log(req.body);
   const { parameter, type, page = 1, pageSize = 10, proyectos,rooms } = req.body;
-  console.log(rooms);
   let property_type = "";
 
   if (type) {
